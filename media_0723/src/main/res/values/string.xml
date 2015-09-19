@@ -1,0 +1,27 @@
+<resources>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="cannot">Cannot</string>
+    <string name="app_name">Video_yre</string>
+
+    <string name="full_app_name">FFmpeg4Android </string>
+    <string name="welcome_demo">FFmpeg4Android  shows how easy it is for every application to run FFMpeg commands.</string>
+    <string name="welcome_1">Simple example using a AsyncTask without progress bar.\n
+        When using this technique, you will not be able to stop the operation while its running.</string>
+    <string name="welcome_2">Simple progress bar example with stop support (you can cancel the transcoding when its running).</string>
+    <string name="welcome_3">Progress bar with notification example (and stop / cancel support).\n
+        The notification will work only on Android 4 or above.\n
+        To support notifications on older versions, use the Android support library</string>
+    <string name="commandTextView">Input: /sdcard/DCIM/Camera/in.mp4. Output /sdcard/DCIM/Camera/out.mp4:</string>
+
+
+    <string name="compress_commandText">ffmpeg -y -i /sdcard/DCIM/Camera/in.mp4 -strict experimental -r 30 -ab 48000 -ac 2 -ar 22050 -b 2097k /sdcard/DCIM/Camera/out_compress.mp4</string>
+    <string name="split_commandText">ffmpeg -ss 00:00:01.000 -y -i /sdcard/DCIM/Camera/in.mp4 -strict experimental -t 00:00:02.000 -r 15 -vcodec mpeg4 -b 2097152 -ab 48000 -ac 2 -b 2097152 -ar 22050 /sdcard/DCIM/Camera/out.mp4</string>
+    <string name="split_commandText_1">ffmpeg -ss </string>
+    <string name="split_commandText_2"> -y -i /sdcard/DCIM/Camera/in.mp4 -strict experimental -t </string>
+    <string name="split_commandText_3"> -s 320x240 -r 15 -vcodec mpeg4 -b 2097152 -ab 48000 -ac 2 -b 2097152 -ar 22050 /sdcard/DCIM/Camera/out.mp4</string>
+    <string name="merge_commandText">ffmpeg -i out1.mp4 -i out2.mp4 -i out3.mp4 -i out4.mp4 -filter_complex '[0:0][1:0][2:0][3:0]concat=n=4:v=0:a=1[out]' -map '[out]' output.mp4</string>
+
+</resources>
